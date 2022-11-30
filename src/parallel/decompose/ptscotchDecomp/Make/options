@@ -5,7 +5,6 @@ EXE_INC = \
     -I$(FOAM_SRC)/Pstream/mpi/lnInclude \
     -I$(SCOTCH_ARCH_PATH)/include/$(FOAM_MPI) \
     -I$(SCOTCH_ARCH_PATH)/include \
-    -I/usr/include/scotch \
     -I../decompositionMethods/lnInclude
 
 LIB_LIBS = \
