@@ -63,9 +63,9 @@ error() {
 pvExec () {
     if [ "$ParaView_GL" = mesa ]
     then
-        LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ParaView_LIB_DIR/mesa paraview "$@"
+        LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ParaView_LIB_DIR/mesa $PARAVIEW "$@"
     else
-        paraview "$@"
+        $PARAVIEW "$@"
     fi
 }
 
@@ -153,11 +153,6 @@ do
         ;;
     esac
 done
-
-# Check that reader module has been built
-[ $requirePV -eq 1 ] && \
-    ! [ -f "$PV_PLUGIN_PATH/libPVFoamReader_SM.so" ] && \
-    noPVReader && exit 1
 
 # Check for --data=... argument
 hasDataArg()
