@@ -39,22 +39,7 @@
 #
 #------------------------------------------------------------------------------
 
-boost_version=boost-system
-#boost_version=boost-1.55.0
-#boost_version=boost-1.72.0
-
-cgal_version=cgal-system
-#cgal_version=CGAL-4.10
-#cgal_version=CGAL-5.0.2
-
-if [ "$boost_version" != "boost-system" ]
-then
-    export BOOST_ARCH_PATH=$WM_THIRD_PARTY_DIR/$boost_version
-fi
-
-if [ "$cgal_version" != "cgal-system" ]
-then
-    export CGAL_ARCH_PATH=$WM_THIRD_PARTY_DIR/$cgal_version
-fi
+export CGAL_ARCH_PATH=$CGAL_ROOT
+export BOOST_ARCH_PATH=$BOOST_ROOT
 
 #------------------------------------------------------------------------------
