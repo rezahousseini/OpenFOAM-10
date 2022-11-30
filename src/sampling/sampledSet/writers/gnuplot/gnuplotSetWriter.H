@@ -53,7 +53,7 @@ class gnuplotSetWriter
 public:
 
     //- Runtime type information
-    TypeName("gnuplot");
+    TypeName("$GNUPLOT");
 
 
     // Constructors

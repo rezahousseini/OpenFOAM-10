@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if ! which gnuplot > /dev/null 2>&1
+if ! which $GNUPLOT > /dev/null 2>&1
 then
     echo "gnuplot not found - skipping graph creation" >&2
     exit 1
@@ -8,7 +8,7 @@ fi
 
 time=$(foamListTimes -case .. -latestTime)
 
-gnuplot<<EOF
+$GNUPLOT<<EOF
     set term post enhanced color solid linewidth 2.0 20
     set out "graphs.eps"
     set encoding utf8

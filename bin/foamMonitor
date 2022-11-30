@@ -98,7 +98,7 @@ title="Data Monitoring"
 size=""
 gpterminal='x11 1 font "helvetica,17" linewidth 1.5 persist noraise'
 
-command -v gnuplot >/dev/null 2>&1 || error "Gnuplot not installed"
+command -v $GNUPLOT >/dev/null 2>&1 || error "Gnuplot not installed"
 
 # parse options
 while [ "$#" -gt 0 ]
@@ -197,7 +197,7 @@ done
 plotFileFooter >> "$gp_file"
 
 touch "$file"
-gnuplot "$gp_file" &
+$GNUPLOT "$gp_file" &
 pid=$!
 
 while true

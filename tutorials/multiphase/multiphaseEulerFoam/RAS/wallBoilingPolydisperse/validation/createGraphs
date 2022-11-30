@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if ! which gnuplot > /dev/null 2>&1
+if ! which $GNUPLOT > /dev/null 2>&1
 then
     echo 'gnuplot not found - skipping graph creation' >&2
     exit 1
@@ -9,7 +9,7 @@ fi
 graphFile=$(foamListTimes -latestTime)/line.xy
 surfaceFile=$(cd postProcessing/inflow && ls -1tr */* | tail -n 1)
 
-gnuplot<<EOF
+$GNUPLOT<<EOF
 
     set terminal postscript eps size 8,9 color enhanced font "Helvetica,20"
     set output "./validation/$(basename "$PWD").eps"

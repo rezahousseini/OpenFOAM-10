@@ -32,6 +32,6 @@ done < "ageValues"
 paste positionsZ ageDimless2 > Pos2_OF
 
 # ------ Plot the results
-gnuplot plot*
+$GNUPLOT plot*
 
 #------------------------------------------------------------------------------

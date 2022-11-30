@@ -38,7 +38,7 @@ do
     done
 done
 
-gnuplot << EOF
+$GNUPLOT << EOF
 
 set terminal eps enhanced size 5.83,8.27
 set output 'postProcessing.eps'

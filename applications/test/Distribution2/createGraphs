@@ -1,6 +1,6 @@
 #!/bin/sh
 
-gnuplot<<EOF
+$GNUPLOT<<EOF
     set terminal postscript eps color enhanced font "Helvetica,15"
     set output 'comparison.eps'
     set multiplot layout 2, 1

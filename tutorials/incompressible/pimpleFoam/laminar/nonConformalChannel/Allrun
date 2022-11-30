@@ -33,7 +33,7 @@ outletFlowRateAMI=postProcessing/outletFlowRate.AMI/0/surfaceFieldValue.dat
 inletFlowRateNonConformalCyclic=postProcessing/inletFlowRate.nonConformalCyclic/0/surfaceFieldValue.dat
 outletFlowRateNonConformalCyclic=postProcessing/outletFlowRate.nonConformalCyclic/0/surfaceFieldValue.dat
 
-gnuplot << EOF
+$GNUPLOT << EOF
 set terminal postscript eps color enhanced
 set output "error.eps"
 set xlabel "Time (s)"

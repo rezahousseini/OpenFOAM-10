@@ -6,7 +6,7 @@ inletFlowRate=postProcessing/inletFlowRate/0/surfaceFieldValue.dat
 lowerOutletFlowRate=postProcessing/lowerOutletFlowRate/0/surfaceFieldValue.dat
 upperOutletFlowRate=postProcessing/upperOutletFlowRate/0/surfaceFieldValue.dat
 
-gnuplot << EOF
+$GNUPLOT << EOF
 set terminal postscript eps color enhanced
 set output "flowRate.eps"
 set xlabel "Time (s)"
@@ -19,7 +19,7 @@ plot \
     us 1:(\$2+\$4) w l t "Total Outlet"
 EOF
 
-gnuplot << EOF
+$GNUPLOT << EOF
 set terminal postscript eps color enhanced
 set output "error.eps"
 set xlabel "Time (s)"

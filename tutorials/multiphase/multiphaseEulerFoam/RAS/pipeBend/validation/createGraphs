@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if ! which gnuplot > /dev/null 2>&1
+if ! which $GNUPLOT > /dev/null 2>&1
 then
     echo 'gnuplot not found - skipping graph creation' >&2
     exit 1
@@ -15,7 +15,7 @@ afterBend7D=../postProcessing/probabilityDensity.afterBend_7d/$time/probabilityD
 afterBend9D=../postProcessing/probabilityDensity.afterBend_9d/$time/probabilityDensity.afterBend_9d.xy
 layerAverage=../postProcessing/graphCrossSection/$time/layerAverage.xy
 
-gnuplot<<EOF
+$GNUPLOT<<EOF
     set terminal postscript eps color enhanced font "Helvetica,20"
 
     set output '../volumeDensity.eps'
@@ -31,7 +31,7 @@ gnuplot<<EOF
          "$afterBend9D" u (\$1*1e6):(\$2) w histeps lw 3 lc rgb 'blue' t 'After bend: 9D'
 EOF
 
-gnuplot<<EOF
+$GNUPLOT<<EOF
     set terminal postscript eps color enhanced font "Helvetica,20"
 
     set output '../crossSectionAverageDiameter.eps'

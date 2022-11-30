@@ -229,3 +229,5 @@ unset cleaned foamClean foamOldDirs
 [ "$BASH" ] && . $WM_PROJECT_DIR/etc/config.sh/bash_completion
 
 #------------------------------------------------------------------------------
+
+export GNUPLOT=gnuplot

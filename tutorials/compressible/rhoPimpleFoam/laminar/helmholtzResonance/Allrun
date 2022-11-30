@@ -31,7 +31,7 @@ run resolved
 run modelled
 
 # Plot a comparison of the pressure in the neck
-cat << EOF | gnuplot -persist
+cat << EOF | $GNUPLOT -persist
 
 set terminal postscript eps size 5,4 enhanced color
 

@@ -54,7 +54,7 @@ class gnuplotGraph
 public:
 
     //- Runtime type information
-    TypeName("gnuplot");
+    TypeName("$GNUPLOT");
 
     //- FileName extension  for this graph format
     static const word ext_;

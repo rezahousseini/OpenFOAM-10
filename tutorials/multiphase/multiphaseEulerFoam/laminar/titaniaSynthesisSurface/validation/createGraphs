@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if ! which gnuplot > /dev/null 2>&1
+if ! which $GNUPLOT > /dev/null 2>&1
 then
     echo 'gnuplot not found - skipping graph creation' >&2
     exit 1
@@ -10,7 +10,7 @@ time=$(foamListTimes -case .. -latestTime)
 
 graphFile=../postProcessing/graph/$time/line.xy
 
-gnuplot<<EOF
+$GNUPLOTt<<EOF
     set terminal postscript eps color enhanced font "Helvetica,20"
     set output '../species.eps'
 
@@ -29,7 +29,7 @@ EOF
 
 resultFile=../postProcessing/numberDensity/$time/numberDensity.xy
 
-gnuplot<<EOF
+$GNUPLOT<<EOF
     set terminal postscript eps color enhanced font "Helvetica,20"
     set output '../sizeDistribution.eps'
 

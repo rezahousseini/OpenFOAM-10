@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
     }
     dataFile<< endl;
     animationFile
-        << "#!/usr/bin/env gnuplot" << endl << endl
+        << "$GNUPLOT" << endl << endl
         << "$data << end" << endl;
 
     // Run the RBD simulation

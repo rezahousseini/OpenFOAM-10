@@ -37,7 +37,7 @@ done
 
 # create validation plot
 # test if gnuplot exists on the system
-if ! which gnuplot > /dev/null 2>&1
+if ! which $GNUPLOT > /dev/null 2>&1
 then
     echo "gnuplot not found - skipping graph creation" >&2
     exit 1
@@ -46,7 +46,7 @@ fi
 graphName="OF_vs_ANALYTICAL.eps"
 
 echo "Creating graph of u+ vs y+ to $graphName"
-gnuplot<<EOF
+$GNUPLOT<<EOF
     set terminal postscript eps color enhanced
     set output "$graphName"
     set grid

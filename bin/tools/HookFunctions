@@ -391,7 +391,7 @@ checkBanner() # scope, files...
                         errorMessages+=("$file")
                     fi
                     ;;
-                (''|awk|csh|gnuplot|sed|sh)
+                (''|awk|csh|$GNUPLOT|sed|sh)
                     if ! git show $scopeShow"$file" | pcregrep -q -M "$scriptBanner"
                     then
                         ((++errorCount))

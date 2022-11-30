@@ -42,7 +42,7 @@ createEpsT()
     OF=$2
     EXPT=$3
 
-    gnuplot<<EOF
+    $GNUPLOT<<EOF
     set terminal postscript eps color enhanced
     set output "OF_vs_EXPT_T$i.eps"
     set xlabel "Channel width, x / [m]"
@@ -66,7 +66,7 @@ createEpsU()
     OF=$2
     EXPT=$3
 
-    gnuplot<<EOF
+    $GNUPLOT<<EOF
     set terminal postscript eps color enhanced
     set output "OF_vs_EXPT_U$i.eps"
     set xlabel "Channel width, x / [m]"
@@ -86,7 +86,7 @@ EOF
 echo "createGraphs:"
 
 # test if gnuplot exists on the system
-if ! which gnuplot > /dev/null 2>&1
+if ! which $GNUPLOT > /dev/null 2>&1
 then
     echo "FOAM FATAL ERROR: gnuplot not found - skipping graph creation" >&2
     exit 1
