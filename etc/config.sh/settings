@@ -290,6 +290,9 @@ OpenFOAM | ThirdParty)
     ;;
 system)
     # Use system compiler
+    # Use system GMP and MPFR packages
+    export GMP_ARCH_PATH=$GMP_ROOT
+    export MPFR_ARCH_PATH=$MPFR_ROOT
     ;;
 *)
     echo "Warn: WM_COMPILER_TYPE='$WM_COMPILER_TYPE' is unsupported" 1>&2
