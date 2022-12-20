@@ -41,12 +41,12 @@ isTest()
 
 getNumberOfProcessors()
 {
-    foamDictionary -entry numberOfSubdomains -value system/decomposeParDict
+    foamDictionary -entry numberOfSubdomains -value -expand system/decomposeParDict
 }
 
 getApplication()
 {
-    foamDictionary -entry application -value system/controlDict
+    foamDictionary -entry application -value -expand system/controlDict
 }
 
 runApplication()
