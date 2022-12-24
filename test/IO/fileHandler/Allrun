@@ -93,5 +93,7 @@ mkdir -p machineB/fileHandler
     -roots "(\"$d/machineA\" \"$d/machineB\" \"$d/machineB\")"
 )
 
+# wait for child processes to finish
+wait
 
 #------------------------------------------------------------------------------
