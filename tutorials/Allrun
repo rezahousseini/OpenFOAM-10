@@ -88,6 +88,9 @@ logReportDir()
     for log in `echo $logs | xargs ls -rt`
     do
         logReport $log >> ../testLoopReport || retVal=1
+	if [ "$retVal" -ne "0" ]; then
+	    echo `cat $log`
+	fi
     done
     echo "" >> ../testLoopReport
 
